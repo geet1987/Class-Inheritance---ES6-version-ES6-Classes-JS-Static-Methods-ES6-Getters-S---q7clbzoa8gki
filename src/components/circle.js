@@ -1,17 +1,16 @@
-// import using require
-import shape from ./shape;
-// declare class
-class Circle extends Shape {
-    constructor(x, y, radius) {
-        super(x, y, radius);
-        this.radius = radius
-    }
- 
-    getArea() {...}
- 
-}
- 
-let circle = new Circle(1,2,3);
-
-// export class using module.exports
-default export circle;
+var Shape = require('./shape'); 
+  
+ // declare class 
+ class Circle extends Shape{ 
+     constructor(name){ 
+         super(name); 
+  
+     } 
+  
+     calculateArea(radius){ 
+         return Math.PI * Math.pow(radius,2); 
+     } 
+      
+ } 
+  
+ module.exports=Circle; 
